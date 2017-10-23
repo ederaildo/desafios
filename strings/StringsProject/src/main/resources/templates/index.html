@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<title>Desafio 1 - IDwall - Strings</title>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Desafio 1 IDwall - Strings</h1>
+        <p>Manipulação de Strings</p>
+      </div>
+    </div>
+  <div class="container">
+      <form class="form-group" action="#" th:action="@{/}" th:object="${texto}" method="post">
+		
+		<div class="form-group row">
+		   <label for="numMaxChar" class="col-sm-4 col-form-label">Número máximo de caracteres por linha:</label>
+		   <div class="col-sm-2">
+		     <input type="text" class="form-control" th:field="*{numMaxChars}" />
+		     <div class="alert alert-danger alert-dismissable" th:if="${#fields.hasErrors('numMaxChars')}">Número inválido</div>
+		   </div>
+		</div>
+		
+		<div class="row">
+		    <div class="col">
+		      <label for="txtOriginal" >Texto Original</label>
+		      <div class="alert alert-danger alert-dismissable" th:if="${#fields.hasErrors('txtOriginal')}" th:errors="*{txtOriginal}">Texto obrigatório</div>
+		      <textarea  wrap="soft" class="form-control" style="font-family:courier;" th:field="*{txtOriginal}" rows="18">
+		      </textarea>
+		    </div>
+		    <div class="col">
+		      <label for="txtOutput1">Parte 1 - Output</label>
+		      <textarea  readOnly="true" class="form-control" rows="7" th:field="*{txtOutput1}" style="font-family:courier;"></textarea>
+		      <label for="txtOutput2">Parte 2 - Output (Justificado)</label>
+		      <textarea  readOnly="true" class="form-control" rows="7" th:field="*{txtOutput2}" style="font-family:courier;"></textarea>
+		    </div>
+		</div>
+		<div class="row">
+		    <div class="col" style="padding: 15px;">
+              <p><button class="btn btn-lg btn-block btn-primary" type="submit">Formatar</button></p>
+            </div>
+        </div>
+      </form>
+  </div>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/popper.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

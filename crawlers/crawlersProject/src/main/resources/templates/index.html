@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+<head>
+<title>Desafio 2 - IDwall - Crawlers</title>
+<link href="css/bootstrap.min.css" rel="stylesheet"/>
+</head>
+
+<body>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1 class="display-3">Desafio 2 IDwall - Crawlers</h1>
+        <p>Robo que envia uma lista de Top subreddits lista via Telegram.</p>
+        <p>A mensagem sera enviada ao Canal Telegram "Desafio Crawlers IDwall"  @nadaprafazerIDwall</p>
+      </div>
+    </div>
+  <div class="container">
+      <form class="form-group" action="#" th:action="@{/}" th:object="${comando}" method="post">
+		
+		<div class="form-group row">
+		   <label for="comando" class="col-sm-4 col-form-label">Comando:</label>
+		   <div class="col-sm-10">
+		     <input type="text" class="form-control" placeholder="Exemplo: /NadaPraFazer programming;dogs;brazil" th:field="*{comandoTexto}" />
+		     <div class="alert alert-danger alert-dismissable" th:if="${#fields.hasErrors('comandoTexto')}">Comando invalido</div>
+		   </div>
+		</div>
+		<div th:if="${comando.msg}"> 
+			<div class="row">
+			   <div class="alert alert-success" role="alert" th:text="${comando.msg}"></div>
+	        </div>
+        </div>
+        <div th:if="${comando.msgErro}"> 
+			<div class="row">
+			   <div class="alert alert-danger" role="alert" th:text="${comando.msgErro}"></div>
+			</div>
+		</div>
+		<div class="row">
+		    <div class="col" style="padding: 15px;">
+              <p><button class="btn btn-lg btn-block btn-primary" type="submit">Enviar</button></p>
+            </div>
+        </div>
+      </form>
+  </div>
+  <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+  <script src="js/popper.js" type="text/javascript"></script>
+  <script src="js/bootstrap.min.js" type="text/javascript"></script>
+</body>
+</html>

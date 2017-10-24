@@ -1,0 +1,8 @@
+com\desafio\crawlers\Comando.class
+com\desafio\crawlers\sb\CrawlersController.class
+com\desafio\crawlers\sb\CrawlersApplication.class
+com\desafio\crawlers\SubReddit.class
+com\desafio\crawlers\SubReddit$1.class
+com\desafio\crawlers\CliBasicParser.class
+com\desafio\crawlers\CrawlersBot.class
+com\desafio\crawlers\CrawlersMain.class

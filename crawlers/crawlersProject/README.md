@@ -3,7 +3,7 @@
 
 ## Sobre
 
-ImplementaÁ„o do desafio 2 da IDWall sobre recuperaÁ„o de Crawlers.
+Implementa√ß√£o do desafio 2 da IDWall sobre recupera√ß√£o de Crawlers.
 
 ## Autor
 
@@ -21,12 +21,12 @@ Ederaildo Fontes
 
 ## Pre Requisitos
 
-Para instalacao e execuÁ„oo ser· necess·rio:
+Para instalacao e execu√ß√£oo ser√° necess√°rio:
 
 * Java 8
 * Maven 3.4.* ou maior
 
-## InstalaÁ„o
+## Instala√ß√£o
 
 Executar o comando:
 
@@ -34,7 +34,7 @@ Executar o comando:
 mvn clean install
 ```
 
-## ExecuÁ„o Parte 1
+## Execu√ß√£o Parte 1
 
 Executar o comando:
 
@@ -42,13 +42,13 @@ Executar o comando:
 mvn exec:java -Dsubreddits=[Lista de subreddits]
 ```
 
-A opÁ„o `-Dsubreddits` deve receber uma lista dos nomes de subreddits separados por vÌrgula. Por exemplo: 
+A op√ß√£o `-Dsubreddits` deve receber uma lista dos nomes de subreddits separados por v√≠rgula. Por exemplo: 
 
 ```
 mvn exec:java -Dsubreddits=askreddit;worldnews;cats
 ```
 
-O output ser· mostrado assim:
+O output ser√° mostrado assim:
 
 
 ```
@@ -73,31 +73,31 @@ O output ser· mostrado assim:
 # link comments.: /r/worldnews/comments/783av6/the_us_air_force_is_preparing_to_put_nucleararmed/
 ```
 
-## ExecuÁ„o Parte 2
+## Execu√ß√£o Parte 2
 
-A parte 2 do desafio foi construÌda em cima de um webcontainer Spring Boot para receber o comando foi registrado um BOT no Telegram.
+A parte 2 do desafio foi constru√≠da em cima de um webcontainer Spring Boot para receber o comando foi registrado um BOT no Telegram.
 
-Para executar È necess·rio acessar o browser nessa URL: 
+Para executar √© necess√°rio acessar o browser nessa URL: 
 
 ```
 http://localhost:8080/
 ```
 
-O campo **Comando** da p·gina deve receber o seguinte comando:
+O campo **Comando** da p√°gina deve receber o seguinte comando:
 
 ```
 /NadaPraFazer [Lista de subreddits]
 ```
 
-Devendo receber uma lista dos nomes de subreddits separados por vÌrgula. Por exemplo: 
+Devendo receber uma lista dos nomes de subreddits separados por v√≠rgula. Por exemplo: 
 
 ```
 /NadaPraFazer -Dsubreddits=askreddit;worldnews;cats
 ```
 
-ApÛs a execuÁ„o do comando ser· enviada uma lista de threads para cada subreddits, sendo mostrados somente as threads com upvotes maiores que 5000.
+Ap√≥s a execu√ß√£o do comando ser√° enviada uma lista de threads para cada subreddits, sendo mostrados somente as threads com upvotes maiores que 5000.
 
-Essa lista ser· enviada para o canal do Telegram [@nadaprafazerIDwall](https://t.me/nadaprafazerIDwall)
+Essa lista ser√° enviada para o canal do Telegram [@nadaprafazerIDwall](https://t.me/nadaprafazerIDwall)
 
 
 ## Contributors
